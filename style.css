@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+.form-required, .form-button-error {
+    display: none !important;
+  }
+
+.box {
+    width: 75%;
+    margin: auto;
+    margin-top: 2vh;
+    border-radius: 15px;
+    padding: 10px;
+    padding-bottom: 15vh;
+    padding-right: 20px;
+    background-color: #F0FFFF;
+}
+
+body {
+    background: linear-gradient(to left , #1C2841, #131e32, #071023);
+    font-family: 'poppins';
+}
+
+.all {
+    display: flex;
+    min-height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.kont {
+    width: 60%;
+}
+
+.wpis {
+    position: relative;
+    height: 9vh;
+    line-height: 9vh;
+}
+
+input {
+    position: absolute;
+    width: 100%;
+    outline: none;
+    font-size: 2em;
+    line-height: 8vh;
+    border-radius: 10px;
+    border: 2px solid #1C2841;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 2;
+    padding-left: 20px;
+    padding-right: 0px;
+}
+
+h1 {
+    color: #1C2841;
+    text-align: center;
+    font-size: 4vh;
+}
+
+.label {
+    position: absolute;
+    font-size: 1.6vw;
+    color: #1C2841;
+    padding: 0 2%;
+    margin: 0 20px;
+    background-color:#F0FFFF;
+    transition: 0.2s ease;
+}
+
+input:focus,
+input:valid {
+    color: #1C2841;
+}
+input:focus + .label,
+input:valid + .label {
+    color: #1C2841;
+    height: 30px;
+    padding: 0 12px;
+    line-height: 1.5;
+    transform: translate(-2vh, -2vh) scale(0.88);
+    z-index: 2;
+}
+
+.send {
+    background-color: #F0FFFF;
+    border: 2px solid #F0FFFF;
+    color: #1C2841;
+    text-align: center;
+    font-size: 2vh;
+    border-radius: 4px;
+    margin-top: 1vh;
+    scale: 1.5;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-color:#1C2841;
+}
+
+.send:hover {
+    background-color: #1C2841;
+    color: #F0FFFF;
+    border-color:#1C2841;
+}
+
+.wys {
+    margin: 0;
+    margin-top: 30px;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+.area {
+    position: absolute;
+    width: 100%;
+    outline: none;
+    line-height: 9vh;
+    border-radius: 10px;
+    border: 2px solid #1C2841;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 2;
+    padding-left: 20px;
+    padding-right: 0px;
+    font-family: 'poppins';
+    color:#1C2841;
+    height:9vh;
+    font-size: 1.6vw;
+}
