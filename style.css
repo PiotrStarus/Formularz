@@ -1,18 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 
-.form-required, .form-button-error {
-    display: none !important;
-  }
+* {
+    scroll-behavior: smooth;
+}
 
-.box {
-    width: 75%;
-    margin: auto;
-    margin-top: 2vh;
-    border-radius: 15px;
-    padding: 10px;
-    padding-bottom: 15vh;
-    padding-right: 20px;
-    background-color: #F0FFFF;
+@keyframes move {
+    from {margin-left: 3%;}
+    to {margin-left: 53%;}
+}
+
+.linia {
+    position: absolute;
+    margin-top: 6%;
+    border: 0;
+    width: 53%;
+    height:0;
+    border-top: 5px dotted #1C2841;
+    margin-left: 3%;
+}
+
+.pacman {
+    position: absolute;
+    margin-top: 4.65%;
+    height: 50px;
+    width: 50px;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.ghost {
+    position: absolute;
+    margin-top: 4.65%;
+    height: 50px;
+    width: 50px;
+    animation-delay: 500ms;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
 }
 
 body {
@@ -20,115 +49,534 @@ body {
     font-family: 'poppins';
 }
 
-.all {
-    display: flex;
-    min-height: 10vh;
-    justify-content: center;
-    align-items: center;
+.main {
+    font-size: 25px;
+    color: #ffffff;
 }
 
-.kont {
-    width: 60%;
+.pod {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #afafaf;
 }
 
-.wpis {
-    position: relative;
-    height: 9vh;
-    line-height: 9vh;
+.box {
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    width: 75%;
+    margin-left: 19%;
+    margin-top: 4vh;
+    border-radius: 15px;
+    background-color: #FFFFFF;
 }
 
-input {
-    position: absolute;
-    width: 100%;
-    outline: none;
-    font-size: 2em;
-    line-height: 8vh;
-    border-radius: 10px;
-    border: 2px solid #1C2841;
-    background: transparent;
-    transition: 0.1s ease;
-    z-index: 2;
-    padding-left: 20px;
-    padding-right: 0px;
-}
-
-h1 {
+.box h1 {
     color: #1C2841;
-    text-align: center;
     font-size: 4vh;
 }
 
-.label {
-    position: absolute;
-    font-size: 1.6vw;
+p {
     color: #1C2841;
-    padding: 0 2%;
-    margin: 0 20px;
-    background-color:#F0FFFF;
-    transition: 0.2s ease;
-}
-
-input:focus,
-input:valid {
-    color: #1C2841;
-}
-input:focus + .label,
-input:valid + .label {
-    color: #1C2841;
-    height: 30px;
-    padding: 0 12px;
-    line-height: 1.5;
-    transform: translate(-2vh, -2vh) scale(0.88);
-    z-index: 2;
-}
-
-.send {
-    background-color: #F0FFFF;
-    border: 2px solid #F0FFFF;
-    color: #1C2841;
-    text-align: center;
     font-size: 2vh;
-    border-radius: 4px;
-    margin-top: 1vh;
-    scale: 1.5;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-color:#1C2841;
 }
 
-.send:hover {
-    background-color: #1C2841;
-    color: #F0FFFF;
-    border-color:#1C2841;
+.box li {
+    color: #1C2841;
+    padding-left: 5%;
 }
 
-.wys {
-    margin: 0;
-    margin-top: 30px;
+.sidenav {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    border-right: 5px solid #FFFFFF;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #FFFFFF;
+    transition: 0.4s;
+}
+
+#tranzycje {
+    font-size: 4em;
+    color: #FFFFFF;
+    padding-left: 19%;
+}
+
+#transformacje {
+    font-size: 4em;
+    color: #FFFFFF;
+    padding-left: 19%;
+}
+
+#animacje {
+    font-size: 4em;
+    color: #FFFFFF;
+    padding-left: 19%;
+}
+
+.kom {
+    padding-top: 3%;
+    color: #00781c;
+}
+
+.kod1 {
+    padding-top: 3%;
+    color: #1C2841;
+}
+
+.kod {
+    color: #1C2841;
+    text-indent: 2em;
+}
+
+.kod2 {
+    color: #1C2841;
+}
+
+.kwadrat-width {
+    width: 100px;
+    height: 100px;
+    background: #1C2841;
+    transition: width 2s;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+.kwadrat-width:hover {
+    width: 300px;
+}
+
+.container {
+    display: flex;
+}
+
+.kwadrat-width-ease {
+    width: 200px;
+    height: 100px;
+    background: #1C2841;
+    transition: width 2s;
+    margin-left: 3%;
+    margin-top: 3%;
+    transition-timing-function: ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.kwadrat-width-ease:hover {
+    width: 93%;
+}
+
+.kwadrat-width-linear {
+    width: 200px;
+    height: 100px;
+    background: #1C2841;
+    transition: width 2s;
+    margin-left: 3%;
+    margin-top: 3%;
+    transition-timing-function: linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.kwadrat-width-linear:hover {
+    width: 93%;
+}
+
+.kwadrat-width-easein {
+    width: 200px;
+    height: 100px;
+    background: #1C2841;
+    transition: width 2s;
+    margin-left: 3%;
+    margin-top: 3%;
+    transition-timing-function: ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.kwadrat-width-easein:hover {
+    width: 93%;
+}
+
+.kwadrat-width-easeout {
+    width: 200px;
+    height: 100px;
+    background: #1C2841;
+    transition: width 2s;
+    margin-left: 3%;
+    margin-top: 3%;
+    transition-timing-function: ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.kwadrat-width-easeout:hover {
+    width: 93%;
+}
+
+.kwadrat-width-easeinout {
+    width: 200px;
+    height: 100px;
+    background: #1C2841;
+    transition: width 2s;
+    margin-left: 3%;
+    margin-top: 3%;
+    transition-timing-function: ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.kwadrat-width-easeinout:hover {
+    width: 93%;
+}
+
+
+
+
+
+.kwadrat-width-delay {
+    width: 100px;
+    height: 100px;
+    background: #1C2841;
+    transition: width 2s;
+    margin-left: 3%;
+    margin-top: 3%;
+    transition-delay: 1s;
+}
+
+.kwadrat-width-delay:hover {
+    width: 300px;
+}
+
+.kwadrat-translate {
+    width: 100px;
+    height: 100px;
+    background: #1C2841;
+    transform: translate(50px, 50px);
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+.kwadrat-standard {
+    margin-left: 3%;
+    margin-top: 3%;
     position: absolute;
-    left: 50%;
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
+    width: 100px;
+    height: 100px;
+    background: #9399b2;
 }
 
-.area {
-    position: absolute;
-    width: 100%;
-    outline: none;
-    line-height: 9vh;
-    border-radius: 10px;
-    border: 2px solid #1C2841;
-    background: transparent;
-    transition: 0.1s ease;
-    z-index: 2;
-    padding-left: 20px;
-    padding-right: 0px;
-    font-family: 'poppins';
-    color:#1C2841;
-    height:9vh;
-    font-size: 1.6vw;
+.kwadrat-rotate {
+    width: 100px;
+    height: 100px;
+    background: #1C2841;
+    transform: rotate(20deg);
+    margin-left: 5%;
+    margin-top: 5%;
 }
+
+.kwadrat-scale {
+    width: 100px;
+    height: 100px;
+    background: #1C2841;
+    transform: scale(0.5, 0.5);
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.kwadrat-skew {
+    width: 100px;
+    height: 100px;
+    background: #1C2841;
+    transform: skew(20deg, 10deg);
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.kwadrat-matrix {
+    width: 100px;
+    height: 100px;
+    background: #1C2841;
+    transform: matrix(0.5, -0.3, 1.3, 0.7, 15, 10);
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.kwadrat-rotateX {
+    width: 100px;
+    height: 100px;
+    background: #1C2841;
+    transform: rotateX(40deg);
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.kwadrat-rotateY {
+    width: 100px;
+    height: 100px;
+    background: #1C2841;
+    transform: rotateY(40deg);
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.kwadrat-rotateZ {
+    width: 100px;
+    height: 100px;
+    background: #1C2841;
+    transform: rotateZ(40deg);
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+@keyframes przyklad {
+    0% {background-color: red; transform: skewX(0deg);}
+    25% {background-color: yellow; transform: skewX(5deg);}
+    50% {background-color: blue; transform: skewX(10deg);}
+    75% {background-color: green; transform: skewX(5deg);}
+    100% {background-color: red; transform: skewX(0deg);}
+}
+
+.kwadrat-anim {
+    margin-left: 3%;
+    margin-top: 3%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation-name: przyklad;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.kwadrat-anim-delay {
+    margin-left: 3%;
+    margin-top: 3%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation-name: przyklad;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 10s;
+}
+
+
+/**************************************************************************/
+/****************************KWADRATY POCZATEK*****************************/
+/**************************************************************************/
+
+
+
+/* KWADRAT PRZYKLADU DLA JAK UZYWAC TRANZYCJI CSS */
+
+
+
+.przyklad-duzy {
+    background-color:#CDCDCD;
+    width: 80%;
+    height: 600px;
+    margin-top: 2%;
+    border-radius: 15px;
+}
+
+.przyklad-duzy h1 {
+    color: #1C2841;
+    padding-top: 1%;
+    margin-left: 3%;
+}
+
+.przyklad-maly {
+    border-left: 3px solid #1C2841;
+    width: 93%;
+    height:60%;
+    background-color: #FFFFFF;
+    margin-left: 3%;
+    line-height: 10px;
+}
+
+.przyklad-maly p{
+    margin-left: 3%;
+}
+
+
+
+/* KWADRAT PRZYKLADU DLA OKRESLANIE KRZYWEJ PREDKOSCI PRZEJSCIA */
+
+
+
+.przyklad-duzy-2 {
+    background-color:#CDCDCD;
+    width: 80%;
+    height: 750px;
+    margin-top: 2%;
+    border-radius: 15px;
+}
+
+.przyklad-duzy-2 h1 {
+    color: #1C2841;
+    padding-top: 1%;
+    margin-left: 3%;
+}
+
+
+
+/* KWADRAT PRZYKLADU DLA OPOZNIENIE EFEKTU TRANZYCJI */
+
+
+
+.przyklad-duzy-3 {
+    background-color:#CDCDCD;
+    width: 80%;
+    height: 620px;
+    margin-top: 2%;
+    border-radius: 15px;
+}
+
+.przyklad-duzy-3 h1 {
+    color: #1C2841;
+    padding-top: 1%;
+    margin-left: 3%;
+}
+
+.przyklad-maly-3 {
+    border-left: 3px solid #1C2841;
+    width: 93%;
+    height:60%;
+    background-color: #FFFFFF;
+    margin-left: 3%;
+    line-height: 10px;
+}
+
+.przyklad-maly-3 p{
+    margin-left: 3%;
+}
+
+
+
+/* KWADRAT PRZYKLADU DLA TRANSLATE(), ROTATE(), SCALE()*/
+
+
+
+.przyklad-duzy-4 {
+    background-color:#CDCDCD;
+    width: 80%;
+    height: 500px;
+    margin-top: 2%;
+    border-radius: 15px;
+}
+
+.przyklad-duzy-4 h1 {
+    color: #1C2841;
+    padding-top: 1%;
+    margin-left: 3%;
+}
+
+.przyklad-maly-4 {
+    border-left: 3px solid #1C2841;
+    width: 93%;
+    height:40%;
+    background-color: #FFFFFF;
+    margin-left: 3%;
+    line-height: 10px;
+}
+
+.przyklad-maly-4 p{
+    margin-left: 3%;
+}
+
+
+
+/* KWADRAT PRZYKLADU DLA ANIMACJI */
+
+
+
+.przyklad-duzy-5 {
+    background-color:#CDCDCD;
+    width: 80%;
+    height: 980px;
+    margin-top: 2%;
+    border-radius: 15px;
+}
+
+.przyklad-duzy-5 h1 {
+    color: #1C2841;
+    padding-top: 1%;
+    margin-left: 3%;
+}
+
+.przyklad-maly-5 {
+    border-left: 3px solid #1C2841;
+    width: 93%;
+    height:70%;
+    background-color: #FFFFFF;
+    margin-left: 3%;
+    line-height: 10px;
+}
+
+.przyklad-maly-5 p{
+    margin-left: 3%;
+}
+
+
+
+/* KWADRAT PRZYKLADU DLA PACMANA */
+
+
+
+.przyklad-duzy-6 {
+    background-color:#CDCDCD;
+    width: 80%;
+    height: 830px;
+    margin-top: 2%;
+    border-radius: 15px;
+}
+
+.przyklad-duzy-6 h1 {
+    color: #1C2841;
+    padding-top: 1%;
+    margin-left: 3%;
+}
+
+.przyklad-maly-6 {
+    border-left: 3px solid #1C2841;
+    width: 93%;
+    height:65%;
+    background-color: #FFFFFF;
+    margin-left: 3%;
+    line-height: 10px;
+}
+
+.przyklad-maly-6 p{
+    margin-left: 3%;
+}
+
+
+/**************************************************************************/
+/*****************************KWADRATY KONIEC******************************/
+/**************************************************************************/

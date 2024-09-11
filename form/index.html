@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+</head>
+<body>
+    <div class="box">
+    <h1>
+        Formularz kontaktowy
+    </h1>
+    <div class="all">
+    <div class="kont">
+        <form>
+            <div class="wpis">
+                <input type="text" id="imie" name="imie" required>
+                <div class="label">Podaj imię</div>
+            </div>
+                <br>
+            <div class="wpis">
+                <input type="text" id="nazwisko" required>
+                <div class="label">Podaj nazwisko</div>
+            </div>
+                <br>
+            <div class="wpis">
+                <input type="text" id="email" required>
+                <div class="label">Podaj e-mail</div>
+            </div>
+                <br>
+            <div class="wpis">
+                <input type="text" id="tel" required>
+                <div class="label">Tu wpisz numer telefonu</div>
+            </div>
+                <br>
+            <div class="wpis">
+                <input type="text" id="dev" required>
+                <div class="label">Podaj nazwę urządzenia</div>
+            </div>
+                <br>
+            <div class="wpis">
+                <textarea class="area" placeholder="  Opisz swoj problem"></textarea>
+            </div>
+            <div class="wys">
+                <button onClick="wys();" type="submit" class="send">Wyślij</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
