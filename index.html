@@ -11,6 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul class="nav-bar">
+                <input type="checkbox" id="check">
+                <span class="menu">
+                    <p class="nic">aaaaaaaaaaaaaaaaaaaa</p>
+                    <li><a href="#tranzycje">Tranzycje</a></li>
+                    <li><a href="#transformacje">Transformacje</a></li>
+                    <li><a href="#animacje">Animacje</a></li>
+                    <li><a href="./form/index.html">Kontakt</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
     <div class="sidenav">
         <a class="main" href="#tranzycje">Tranzycje</a>
         <a class="pod" href="#1">Co to tranzycje</a>
@@ -35,6 +51,7 @@
         <a class="pod" href="#18">Krzywe prędkości</a>
         <a class="main" href="./form/index.html">Formularz Kontaktowy</a>
     </div>
+    <br>
     <h1 id="tranzycje">Tranzycje</h1>
     <div class="box">
         <h1 id="1">Co to tranzycje CSS?</h1>
@@ -327,7 +344,7 @@
             <div class="kwadrat-anim-delay"></div>
         </div>
         <br><br>
-        <h1 id="17">Odtwarzanie animacji w odwrotnym kierunku lub cyklach naprzemiennych</h1>
+        <h1 id="17">Odtwarzanie animacji w odwrotnym kierunku</h1>
         <p>Właściwość "animation-direction" określa w jakim kierunku animacja powinna zostać odtworzona.</p>
         <p>Właściwość "animation-direction" może mieć następujące wartości:</p>
         <li>normal -> Animacja jest odtwarzana normalnie (do przodu). To ustawienie jest domyślne.</li>
@@ -362,7 +379,7 @@
                 <p class="kod">animation-iteration-count: infinite;</p>
                 <p class="kod">animation-direction: alternate;</p>
                 <p class="kod">animation-timing-function: linear;</p>
-                <p class="kod">animation-delay: 500ms; <--- Tylko dla ducha</p>
+                <p class="kod">animation-delay: 500ms;</p>
                 <p class="kod2">}</p>
             </div>
             <hr class="linia">

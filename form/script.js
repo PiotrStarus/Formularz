@@ -13,6 +13,8 @@ function wys(){
     email=document.getElementById('email');
     tel=document.getElementById('tel');
     dev=document.getElementById('dev');
+    const okna = [imie, nazwisko, email, tel, dev];
+    const git = (currentValue) => currentValue.style.border
     red(imie);
     red(nazwisko);
     red(email);

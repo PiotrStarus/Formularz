@@ -21,7 +21,8 @@
 
 .pacman {
     position: absolute;
-    margin-top: 4.65%;
+    transform: translate(-50%, -50%);
+    margin-top: 6%;
     height: 50px;
     width: 50px;
     animation-name: move;
@@ -32,8 +33,9 @@
 }
 
 .ghost {
+    transform: translate(-50%, -50%);
     position: absolute;
-    margin-top: 4.65%;
+    margin-top: 6%;
     height: 50px;
     width: 50px;
     animation-delay: 500ms;
@@ -58,6 +60,7 @@ body {
     margin-left: 20px;
     font-size: 16px;
     color: #afafaf;
+    display: block;
 }
 
 .box {
@@ -165,7 +168,7 @@ p {
 }
 
 .kwadrat-width-ease {
-    width: 200px;
+    width: 20%;
     height: 100px;
     background: #1C2841;
     transition: width 2s;
@@ -183,7 +186,7 @@ p {
 }
 
 .kwadrat-width-linear {
-    width: 200px;
+    width: 20%;
     height: 100px;
     background: #1C2841;
     transition: width 2s;
@@ -201,7 +204,7 @@ p {
 }
 
 .kwadrat-width-easein {
-    width: 200px;
+    width: 20%;
     height: 100px;
     background: #1C2841;
     transition: width 2s;
@@ -219,7 +222,7 @@ p {
 }
 
 .kwadrat-width-easeout {
-    width: 200px;
+    width: 20%;
     height: 100px;
     background: #1C2841;
     transition: width 2s;
@@ -237,7 +240,7 @@ p {
 }
 
 .kwadrat-width-easeinout {
-    width: 200px;
+    width: 20%;
     height: 100px;
     background: #1C2841;
     transition: width 2s;
@@ -259,7 +262,7 @@ p {
 
 
 .kwadrat-width-delay {
-    width: 100px;
+    width: 10%;
     height: 100px;
     background: #1C2841;
     transition: width 2s;
@@ -269,7 +272,7 @@ p {
 }
 
 .kwadrat-width-delay:hover {
-    width: 300px;
+    width: 30%;
 }
 
 .kwadrat-translate {
@@ -580,3 +583,204 @@ p {
 /**************************************************************************/
 /*****************************KWADRATY KONIEC******************************/
 /**************************************************************************/
+
+.gora {
+    z-index: 111111111;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .box {
+        margin-left: 10%;
+    }
+
+    .kod{
+        font-size: 0.5em;
+    }
+    .kod1{
+        font-size: 0.5em;
+    }
+    .kod2{
+        font-size: 0.5em;
+    }
+    .kom{
+        font-size: 0.5em;
+    }
+
+    .kwadrat-anim-delay {
+        z-index: 1;
+    }
+    
+    .sidenav {
+        width: 20%;
+        display: none;
+    }
+
+    .nav-bar {
+        position: fixed;
+        margin-top: -10px;
+        background-color: #1C2841;
+        border-top: 2px solid #FFFFFF;
+        border-bottom: 2px solid #FFFFFF;
+        color: #FFFFFF;
+    }
+
+    .menu li a {
+        color: #FFFFFF;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .nic {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    .nav-bar {
+        margin-left: -2%;
+        background-color: transparent;
+        color: #FFFFFF;
+    }
+
+    .nic {
+        color: transparent;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .nav-bar {
+        color: #1C2841;
+        left: 0;
+        z-index: 1111111111111111111111;
+        font-size: 0.5em;
+    }
+
+    #tranzycje {
+        font-size: 1.5em;
+    }
+
+    #transformacje {
+        font-size: 1.5em;
+    }
+
+    #animacje {
+        font-size: 1.5em;
+    }
+
+    .menu li a {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        transition: 0.15s ease-in-out;
+        position: relative;
+        color: #1C2841;
+        text-transform: uppercase;
+        font-size: 8px;
+        margin: 10px;
+        transform: translateX(-6vw);
+    }
+
+    .kwadrat-width-ease {
+        font-size: 0.5em;
+    }
+
+    .kwadrat-width-linear {
+        font-size: 0.5em;
+    }
+
+    .kwadrat-width-easein {
+        font-size: 0.5em;
+    }
+
+    .kwadrat-width-easeout {
+        font-size: 0.5em;
+    }
+
+    .kwadrat-width-easeinout {
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (min-width: 610px) {
+    .menu li {
+        display: flex;
+        justify-content:space-evenly;
+    }
+
+    .menu li a{
+        transition: 0.15s ease-in-out;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin: 30px;
+    }
+}
+
+.nav-bar {
+    left: 0;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 12px 20px;
+    flex-direction:row-reverse;
+}
+.menu {display: flex;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    text-align:center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #1C2841;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    color: #FFFFFF;
+    transform: translateX(-100%);
+    position: absolute;
+}
+.close-menu {
+    top: 20px;
+    transform: translateX(-145%);
+    color: #1C2841;
+    position: absolute;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 120%;
+        height: 15vh;
+        position: fixed;
+        top: -100%;
+        z-index: 111111;
+        background-color: #FFFFFF;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block; position: absolute;}
+    #check:checked ~ .menu {top: 0;}
+}
